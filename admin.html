@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    :root {
+    --sidebar-bg: #2C3E50;
+    --active-blue: #3B82FF;
+    --page-bg: #E9EEF2;
+    --logout-red: #EF4444;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--page-bg);
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--active-blue);
+    padding: 5px;
+    background: white;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile-section h2 { margin: 5px 0; letter-spacing: 1px; text-align: center; }
+.profile-section p { color: #bdc3c7; font-size: 14px; text-align: center; margin-top: 0; }
+
+.menu { width: 100%; margin-top: 30px; }
+.menu-item {
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-item.active {
+    background-color: var(--active-blue);
+    border-radius: 5px;
+}
+
+.logout-btn {
+    margin-top: auto;
+    background-color: var(--logout-red);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Main Content Styling */
+.main-content { padding: 40px; flex-grow: 1; }
+
+.welcome-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0 0 0;
+}
+
+</style>
+
+</head>
+<body>
+<div class="admin-container">
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="avatar-wrapper">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ayaan&backgroundColor=3b82ff" alt="DP">
+            </div>
+            <h2 id="admin-name" id="admin-name"></h2>
+            <p>Super Admin</p>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-item"><i class="fas fa-home"></i> Dashboard</div>
+            <div class="menu-item active"><i class="fas fa-chart-line"></i> Dashboard</div>
+            <div class="menu-item"><i class="fas fa-users"></i> Users List</div>
+            <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+        </nav>
+
+        <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div class="welcome-card">
+            <h1>Welcome Back, <span class="dynamic-name" id="dynamic-name"></span></h1>
+        </div>
+<button id="get-single-btn">Get Single User Data</button>
+<button id="get-all-btn">Get All User Data</button>
+<!-- <div class="main"> -->
+ <div id="main-carder-data-div">
+
+
+ </div>
+ <!-- </div> -->
+    </main>
+    
+</div>
+
+    <script type="module" src="admin.js"></script>
+
+</body>
+</html>

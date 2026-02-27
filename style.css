@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.form{
+    background-color: #fff;
+   height: 300px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+.form h1{
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.eye-div{
+    position: relative;
+    width: 100%;
+}
+.form button{
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#eye{
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+.navbar{
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+}
+.my{
+    width: 80%;
+}
+.main-admin-form{
+    width: 100%;
+    height: 100vh;
+    background-color: #E0E9F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-form{
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #FEFEFE;
+    padding: 30px;
+}
+.security-ui-div{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-circle{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #006eff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#security-icon{
+    font-size: 30px;
+    color: #377CD7  ;
+}
+.admin-login-text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+}
+.ee{
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+.admin-txt{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.admin-login-btn {
+    margin-top: 20px;
+  /* Colors */
+  background-color: #3B82FF; /* Primary Blue from Palette */
+  color: #FFFFFF;
+  
+  /* Sizing */
+  width: 100%;
+  padding: 12px 20px;
+  
+  /* Typography */
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  /* Border & Shape */
+  border: none;
+  border-radius: 6px;
+  
+  /* Effects */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(59, 130, 255, 0.2);
+}
+
+/* Hover Effect: Jab mouse button par aaye */
+.admin-login-btn:hover {
+  background-color: #2563EB; /* Thora dark blue */
+  box-shadow: 0 6px 12px rgba(59, 130, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Active Effect: Jab button click ho */
+.admin-login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(59, 130, 255, 0.2);
+}
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    color: white;
+    background-color:#2C3E50 ;
+}
+#main-carder-data-div{
+    width:100%;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+ display: flex;
+overflow-y: auto;
+
+}
+/* .main{
+    width: 100%;
+    display: flex;
+
+} */
